@@ -326,6 +326,9 @@ span {
         display: block;
         margin: 0px 10px 0px 0px;
     }
+    .rotated {
+        transform: rotate(180deg)
+    }
     .trade {
         padding: 0px 20px 220px 20px;
         margin-bottom: 20px;

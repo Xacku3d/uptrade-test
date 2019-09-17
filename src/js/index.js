@@ -1,6 +1,7 @@
 const menu = document.querySelector('.menu')
 const bg = document.querySelector('.main')
 const trade = document.querySelector('.trade')
+const arrow = document.querySelector('.arrow')
 
 document.querySelector('.menu__trade').addEventListener('click', () => {
     if (menu.className == 'menu') {
@@ -10,6 +11,7 @@ document.querySelector('.menu__trade').addEventListener('click', () => {
             if (menu.className !== 'menu') {
                 trade.className = 'trade container show'
                 trade.style.opacity = '1'
+                arrow.className = 'arrow rotated icon'
             }
         } else {
             setTimeout(() => {
@@ -26,5 +28,6 @@ document.querySelector('.menu__trade').addEventListener('click', () => {
         bg.className = 'main'
         trade.className = 'trade container'
         trade.style.opacity = '0'
+        arrow.className = 'arrow icon'
     }
 })
