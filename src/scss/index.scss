@@ -109,10 +109,12 @@ span {
 .trade {
     position: absolute;
     top: 15%;
-    height: auto;
-    display: none;
-    padding-top: 80px;
-    padding-right: 520px;
+
+    opacity: 0;
+    overflow: hidden;
+    transition: .5s max-height;
+    max-height: 0;
+
     .list__title {
         margin-top: 40px;
         margin-bottom: 30px;
@@ -157,6 +159,16 @@ span {
         margin-top: 20px;
     }
 }
+.show {
+    transition: 3s max-height ease-out,
+    1s opacity ease-in;
+    max-height: 2000px;
+    opacity: 1;
+    margin: auto;
+    width: 1200px;
+    padding-top: 80px;
+    padding-right: 520px;
+}
 
 .hidden {
     transition: 1s;
@@ -196,17 +208,9 @@ span {
     padding-top: 0;
     background-size: cover;
 }
-.show {
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s, height 5s;
-    display: block;
-    margin: auto;
-    width: 1200px;
-}
 
 @media screen and (max-width: 1250px) {
-    .trade {
+    .show {
         padding-left: 20px;
         padding-top: 40px;
         padding-right: 150px;
@@ -263,6 +267,8 @@ span {
     }
     .trade {
         top: 10vh;
+    }
+    .show {
         padding-right: 20px;
     }
     .icon {
@@ -277,13 +283,12 @@ span {
 }
 
 @media screen and (max-width: 700px) {
-    body {
-        background-color: #f3f2da;
-    }
     .main {
+        background-color: rgba(#e8e9f0, 1);
         background-position: center;
     }
     .secondBG {
+        background-color: rgba(#f3f2da, 1);
         background-image: none;
         height: 100%;
     }
@@ -330,13 +335,9 @@ span {
         transform: rotate(180deg)
     }
     .trade {
-        padding: 0px 20px 220px 20px;
-        margin-bottom: 20px;
+        background-color: rgba(#f3f2da, 0.5);
+        padding: 0px 20px 0px 20px;
         position: unset;
-        background-image: url('../img/bg/secondarybg_mobile.png');
-        background-position: bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
         .trade__text {
             font-size: 14pt;
         }
@@ -350,7 +351,15 @@ span {
         }
         .continue {
             margin-top: 0px;
+            margin-bottom: 220px;
         }
+    }
+    .show {
+        margin-bottom: 20px;
+        background-image: url('../img/bg/secondarybg_mobile.png');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     .hidden {
         height: auto;

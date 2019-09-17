@@ -9,8 +9,8 @@ document.querySelector('.menu__trade').addEventListener('click', () => {
         bg.className = 'main secondBG'
         if (window.matchMedia('(max-width: 768px)').matches) {
             if (menu.className !== 'menu') {
-                trade.className = 'trade container show'
                 trade.style.opacity = '1'
+                trade.className = 'trade container show'
                 arrow.className = 'arrow rotated icon'
             }
         } else {
@@ -27,7 +27,7 @@ document.querySelector('.menu__trade').addEventListener('click', () => {
         menu.className = 'menu'
         bg.className = 'main'
         trade.className = 'trade container'
-        trade.style.opacity = '0'
         arrow.className = 'arrow icon'
+        trade.style.opacity = '0'
     }
 })
