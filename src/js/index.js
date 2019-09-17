@@ -13,7 +13,7 @@ document.querySelector('.menu__trade').addEventListener('click', () => {
                     trade.style.opacity = '1'
                 }, 100)
             }
-        }, 1000)
+        }, 500)
     } else {
         menu.className = 'menu'
         bg.className = 'main'
