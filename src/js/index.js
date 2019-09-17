@@ -9,7 +9,9 @@ document.querySelector('.menu__trade').addEventListener('click', () => {
         setTimeout(()=> {
             if (menu.className !== 'menu') {
                 trade.className = 'trade container show'
-                setTimeout(() => { trade.style.opacity = '1'}, 100)
+                setTimeout(() => { 
+                    trade.style.opacity = '1'
+                }, 100)
             }
         }, 1000)
     } else {
