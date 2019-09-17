@@ -112,6 +112,7 @@ span {
     height: auto;
     display: none;
     padding-top: 80px;
+    padding-right: 520px;
     .list__title {
         margin-top: 40px;
         margin-bottom: 30px;
@@ -188,6 +189,7 @@ span {
     }
 }
 .secondBG {
+    height: 100vh;
     transition: 1s all,
     background-image 1.5s;
     background: url('../img/bg/secondarybg.png');
@@ -207,6 +209,7 @@ span {
     .trade {
         padding-left: 20px;
         padding-top: 40px;
+        padding-right: 150px;
     }
     .container {
         max-width: 1000px;
@@ -260,6 +263,7 @@ span {
     }
     .trade {
         top: 10vh;
+        padding-right: 20px;
     }
     .icon {
         margin-bottom: 10px;
